@@ -1,49 +1,14 @@
-from asyncio import tasks
-from json import load
-from tracemalloc import start
-from airflow import DAG
-from airflow.operators.python_operator import PythonOperator
+import pandas as pd
 from datetime import datetime
-
-from datetime import timedelta
+from airflow.models import DAG
+from airflow.operators.python import PythonOperator
+from airflow.hooks.postgres_hook import PostgresHook
+from airflow.models import Variable
+from airflow.operators.bash import BashOperator
+from airflow.providers.postgres.operators.postgres import PostgresOperator
+from scripts.functions import *
 
 import pandas as pd
-
-
-
-
-
-
-
-
-#defining the first task. We are taking our raw data and transforming using pandas
-# def trasform_data:
-
-
-
-    
-
-
-
-#  second task
-# def load_data:
-
-
-
-
-
-#     return
-
-
-
-
-
-
-
-
-
-
-
 
 
 

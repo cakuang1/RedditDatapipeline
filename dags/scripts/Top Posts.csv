@@ -1,0 +1,244 @@
+,Title,Post Text,ID,Score,Total Comments,Post URL
+0,Reinforcement learning - Snake game A.I,"A Snake game A.I made using Pygame, Pytorch, NumPy, Matplotlib and ipython. It uses reinforcement learning . The video shows the result after training the model for over 40 minutes.
+
+[Snake A.I. after 40+ minutes training ](https://reddit.com/link/uy6c8a/video/d4gkbyxg9t191/player)
+
+[Data is plotted as a graph after each game as shown in the image. Matplotlib and ipython is used for the purpose ](https://preview.redd.it/7f5ada9ibt191.png?width=1920&format=png&auto=webp&s=3eddc62e826b941fca06ed7224594e87e1ce1f5e)",uy6c8a,178,7,https://www.reddit.com/r/Python/comments/uy6c8a/reinforcement_learning_snake_game_ai/
+1,I created a simple port scanner on Python3 + PyQt6 and compiled with Nuitka. I will post the source as soon as I tidy up the code.,"**UPDATE: Source code uploaded to the repo!!**
+
+&#x200B;
+
+A friend of mine asked me for it so I share it for free.
+
+There are probably better tools than this one, but I like the results.
+
+This is the repo: [https://github.com/ANTONIOPSD/Multi\_Open\_Port\_Scanner](https://github.com/ANTONIOPSD/Multi_Open_Port_Scanner)
+
+Currently built for Windows x64
+
+Releases: [https://github.com/ANTONIOPSD/Multi\_Open\_Port\_Scanner/releases](https://github.com/ANTONIOPSD/Multi_Open_Port_Scanner/releases)
+
+&#x200B;
+
+This is not pefect, so expect some bugs.
+
+&#x200B;
+
+Some images:
+
+https://i.redd.it/710rv53ocv191.gif
+
+&#x200B;
+
+https://i.redd.it/41xzdw9pcv191.gif
+
+&#x200B;
+
+&#x200B;
+
+https://preview.redd.it/pm3gelz2ux191.png?width=627&format=png&auto=webp&s=613e2bd72c57e756d4617a86d15a102b26d4f7ab",uyf1e3,86,16,https://www.reddit.com/r/Python/comments/uyf1e3/i_created_a_simple_port_scanner_on_python3_pyqt6/
+2,Python Standard Library changes in recent years,,uyb9ke,65,3,https://antonz.org/python-stdlib-changes/
+3,"I made a tutorial on making loading screens for games using multiprocessing instead of multithreading. Multiprocessing can be complicated to understand, so I tried to make it simple using this video. Hope it helps you all :)","Most of us have tried using multithreading to do a loading screen or run a process in the background. But it is not convenient when the process is intensive, which is why multiprocessing needs to be used. But multiprocessing is often a complicated process for newbies. So I made this video to hopefully make it easier for others to understand.
+
+Code can be found [here](https://github.com/tank-king/Tutorials/tree/main/Python%20Pygame/loading_screen)
+
+Video can be found [here](https://www.youtube.com/watch?v=KWGDgPldPVo)
+
+&#x200B;
+
+https://i.redd.it/wc7oy2xmrv191.gif",uygpv1,34,1,https://www.reddit.com/r/Python/comments/uygpv1/i_made_a_tutorial_on_making_loading_screens_for/
+4,Online monitoring service.,"It is necessary that my computer works 24/7 and when it stops working it's notifies me. I'm wrote a Python program and deployed it to Heroku. Notifications are currently sent only to the Telegram messenger.
+
+[https://github.com/saiinc/cloudmon](https://github.com/saiinc/cloudmon)
+
+P.S. Spent some time writing the readme and deployment script.",uya7wu,25,5,https://www.reddit.com/r/Python/comments/uya7wu/online_monitoring_service/
+5,369 algo part II,"So I found something even weirder about the algo that I made.
+
+At first I thought it was weird that if you take a number and add all it's values together down to a single digit and then multiply it by the iteration value and then add those values together, then pass the sum to be multiplied by the next iteration value. Anyways, The output sends out random numbers it seems and then stabilizes to a repeating 9.
+
+ That's all well and good, but I thought that I could do more, so I took the first few numbers that were spit out before the repeating 9 came around, isolated the 3s and 6s, added them together until a single digit and bang, I got:
+
+1 - 6
+
+2 - 3
+
+3 - 9
+
+4 - 6
+
+5 - 3
+
+6 - 9
+
+7 - 6
+
+8 - 3
+
+Plug that into a graph and it's pretty consistent of a wave. 
+
+Last post got a lot of downvotes, so I hope this is at least interesting to some people. Go easy on me, I'm only trying to learn. :)
+
+    def number_func(n):
+        while n >= 10:
+            n = sum(int(i) for i in str(n))
+    
+        for it in range(10):
+            it += 1
+            pro = it * n
+            n = sum(int(i) for i in str(pro))
+            if n != 9:
+                print(""Iteration:"", it, ""Result:"", n)
+            else:
+                print(""Test"", d)
+                print(""----------------------"")
+                break
+    
+    
+    inp = 1
+    d = 1
+    while inp <= 10:
+        number_func(inp)
+        inp += 1
+        d += 1
+
+&#x200B;
+
+https://preview.redd.it/vndrrmn27s191.png?width=700&format=png&auto=webp&s=9fffb0662d4fabd754c165e153a6e583541a05b4",uy2ycv,21,6,https://www.reddit.com/r/Python/comments/uy2ycv/369_algo_part_ii/
+6,My first publish: Song Texts,"Hey guys, 
+
+today I am proud to make my **first published program**  ( yey!) wich is called SongTexts.
+
+&#x200B;
+
+Song Texts loads the chords and lyrics of a song on Ultimate Guitar on your Terminal.
+
+It takes it randomly out of a list pre created and asks you if you want to play it if yes it's scraping the lyrics and chords for you.
+
+No more thinking and looking for the songs you want to play, no more annoying ads to see!
+
+If you got any tips or suggestions I'm glad to hear!
+
+Here is the link to the repo for anyone interested in seeing the code:
+
+[https://github.com/Insane0rion/SongTexts](https://github.com/Insane0rion/SongTexts)
+
+&#x200B;
+
+Kind Regards,
+
+Insane0rion
+
+&#x200B;
+
+&#x200B;
+
+https://preview.redd.it/9s80vgmffv191.jpg?width=1920&format=pjpg&auto=webp&s=abdc0acae14d879bb0a0bfe4c719763144550c75",uyfb97,14,0,https://www.reddit.com/r/Python/comments/uyfb97/my_first_publish_song_texts/
+7,Google Earth Engine Scripts in Python,"Hello,
+
+I am posting here a set of python scripts for Earth Engine in case it comes handy for any pythonista. While creating I had little end to end example references, so I thought I should share it for future space pythonistas.
+
+This is the link to the github source code:
+
+[https://github.com/nikfot/environmental\_metrics\_earth\_engine](https://github.com/nikfot/environmental_metrics_earth_engine)
+
+Thanks",uy6pjy,12,2,https://www.reddit.com/r/Python/comments/uy6pjy/google_earth_engine_scripts_in_python/
+8,Libraries that depend on the CTX package," So, I'm sure most of you have heard about the CTX hack recently. I'm digging through my old code seeing what is going to be effected by this and I can feel my eyes glazing over when I look at the imports. It's one thing to scour my code for this package, but this is such a simple, basic little tool that it could be getting used *anywhere*. Going through every dependency and every dependency of that dependency to see if anyone is calling CTX seems like a horribly inefficient way to do this. Does anyone know a quick and easy way to see which major python libraries use CTX as a dependency? That would at least drastically narrow what I have to slog through manually.",uyb5da,9,15,https://www.reddit.com/r/Python/comments/uyb5da/libraries_that_depend_on_the_ctx_package/
+9,wave function collapse in python,"[https://github.com/TFC-343/River-Land-Generation](https://github.com/TFC-343/River-Land-Generation)
+
+&#x200B;
+
+wave function collapse seemed like a really cool concept so I decided to make my own little program using it, this is really just a demo of the concept but I still think it looks really cool.
+
+requires pygame.
+
+you can even add your own rules if you like in [helper.py](https://helper.py), just add it to the list in get\_nodes() and specify the rules.",uy3gc0,8,4,https://www.reddit.com/r/Python/comments/uy3gc0/wave_function_collapse_in_python/
+10,Easy Python Paint Project using the Pygame Module!,,uyoend,6,0,https://www.youtube.com/watch?v=h2uRcZUfyqM
+11,New release of Firebird driver for Python V1.5.0,,uy64vn,5,0,https://www.firebirdnews.org/new-release-of-firebird-driver-for-python-v1-5-0/
+12,Deploying 5G Around Trees,,uypksf,3,0,https://tech.marksblogg.com/tree-heights-open5g.html
+13,Measuring efficiency of Python generators using resource library,"In my previous article about [Python generators](https://www.pylenin.com/blogs/python-generators/), people asked me to give real world example where generators are actually more beneficial than return statements.
+
+So I have written this article **demonstrating how yield can be better than return** in terms of memory consumption by **comparing reading a 100 row file vs reading a 5 million row file**. 
+
+I have also plotted [a bar plot in Matplotlib](https://www.pylenin.com/blogs/how-fast-are-generators/#plotting-out-the-results-in-matplotlib) showing the memory consumption comparison between yield and return.
+
+Check it out!
+
+[How efficient are Python generators?](https://www.pylenin.com/blogs/how-fast-are-generators/)",uy3an8,3,0,https://www.reddit.com/r/Python/comments/uy3an8/measuring_efficiency_of_python_generators_using/
+14,I made a script that helps me decide where I should put my money.,"I used the Treasury direct API to get data from the most recent Treasury Bill auctions. I then used that data to see how much money I would have made if I put money into those T-Bills and then I also used it to see how much money I would have made if I put the same amount in a bank account with interest. 
+
+[The source code can be found here](https://github.com/ausward/Treasury-vs-Bank-Account.git) 
+
+https://preview.redd.it/fmpdn332vx191.jpg?width=1530&format=pjpg&auto=webp&s=386d59187f74b1897ac982eabc76da7b17936618",uyp7se,1,0,https://www.reddit.com/r/Python/comments/uyp7se/i_made_a_script_that_helps_me_decide_where_i/
+15,Drawing program in tkinter,[https://replit.com/@ratohg/Tkinter-Drawing-Program](https://replit.com/@ratohg/Tkinter-Drawing-Program),uymase,2,0,https://www.reddit.com/r/Python/comments/uymase/drawing_program_in_tkinter/
+16,pauloxnet - The Django speaking tour 2022,,uydugu,2,0,https://www.paulox.net/2022/05/26/the-django-speaking-tour-2022/
+17,"How To Develop, Package and Distribute a Python Library",,uy3fuv,2,0,https://betterprogramming.pub/how-to-develop-package-and-distribute-a-python-library-2cf3a07c643e
+18,"Gradio Blocks + Hugging Face AI python hackathon, build AI web demos like DALLE-mini, anime colorization, face stylization and more! A online hackathon open until May 31st with prizes in which we will create interactive web demos for machine learning models",,uyh0a2,1,0,https://huggingface.co/organizations/Gradio-Blocks/share/YyEmWbViPRZypvGSnZzGxmKEnJqnOqgKKx
+19,Making pip installs a little less slow,,uy7dcb,0,13,https://pythonspeed.com/articles/faster-pip-installs/
+20,Start Building With blqs,,uy39ag,1,1,https://ionq.com/posts/may-24-2022-start-building-with-blqs
+21,Algorithm I wrote to find permutations of a string.,"The idea is to remove first letter of the string and find permutations of the remaining letter. Once you reach single, return that letter as a singleton. For example, if last letter is 'c', return \['c'\]. At this point, recursion will unwind.
+
+During unwinding, we increase the size of the array and then insert the first letter in each item of the array.
+
+This is the code:
+
+\`
+
+def perm(s):  
+if len(s)<2:  
+return \[s\]  
+temp=perm(s\[1:\])  
+j=len(temp)  
+temp = temp\*(len(temp\[0\])+1)  
+for (i,item) in enumerate(temp):  
+temp\[i\]=item\[:i//j\]+s\[0\]+item\[i//j:\]  
+   
+return temp
+
+\`",uxz4dz,1,2,https://www.reddit.com/r/Python/comments/uxz4dz/algorithm_i_wrote_to_find_permutations_of_a_string/
+22,Yet another stock screener,"(stock screeners are to python what wonderwall is to an acoustic guitar. )
+
+anyway here's another screener. 
+Scrapes for daily charts and generates crossover trade signals (DEMA/momentum/price action). 
+Does portfolio optimization via random weight allocation.
+This was somehow fun to do. It still needs tweaking, tests and what not, but behold my first GUI. 
+PysimpleGUI is a beast. Also props to vapeplot, plotext and mplcyberpunk.
+
+https://github.com/squidinkscape/yass",uykgti,0,1,https://www.reddit.com/r/Python/comments/uykgti/yet_another_stock_screener/
+23,Friendly community server for Programming and DevOps,"Hey
+
+I'm not sure if this is the right place but I'll give it a shot. We've been running a small and friendly server for Programming and Devops related discussions. Feel free to join :)
+
+[discord.me/devops](https://discord.me/devops)",uyj5h5,0,0,https://www.reddit.com/r/Python/comments/uyj5h5/friendly_community_server_for_programming_and/
+24,"Termage: A library to export Python terminal output as SVG, complete with an MkDocs plugin!","Over the last couple of days, I managed to [wrap](https://github.com/bczsalba/Termage) PyTermGUI's SVG export feature into a module, which has both a CLI and MkDocs build-time plugin built in. It supports customizing the dimensions, title, colors & more of the outputted terminal image.
+
+The CLI works in a very simple way:
+
+    termage source_file.py --title=""My SVG"" --width=84 --height=15
+
+https://preview.redd.it/pgfya56g1w191.png?width=1919&format=png&auto=webp&s=2e92ae9d603fb5ef84f9a35924dea5057a839689
+
+And the plugin is basically just a custom codeblock syntax:
+
+    ```termage include=source_file.py title=My\ SVG width=84 height=15
+    ```
+
+https://reddit.com/link/uyi3np/video/89humy462w191/player
+
+The plugin allows both the tabbed-syntax as seen above, or just inserting the SVG using `termage-svg <options>`. It also supports multi-level indented codeblocks, because that seemed like a complicated way to spend my afternoon.
+
+If this sounds interesting, check out the [docs](https://termage.bczsalba.com), which are of course built using the plugin!",uyi3np,0,0,https://www.reddit.com/r/Python/comments/uyi3np/termage_a_library_to_export_python_terminal/
+25,Python Vs R,,uypbof,0,0,https://coursementor.com/blog/python-vs-r/
+26,Functools Masterclass with Mike Driscoll,,uyeki8,0,0,https://www.youtube.com/watch?v=t4zln38ABsE
+27,Help with GUI Layout,"Developing my benchmark automation tool for Android. Here is a snippet of a GUI. Need help to improve the layout and appeal. 
+
+&#x200B;
+
+[Configuration \(send adb command to serial of device\)](https://preview.redd.it/qg9cz36dlr191.png?width=303&format=png&auto=webp&s=ae198d9a4f26aa7aa91dc400425b7a26a07533c4)
+
+&#x200B;
+
+[Put device into root mode ](https://preview.redd.it/mtnpuy0jlr191.png?width=320&format=png&auto=webp&s=892d9f213d208a504648ac43019bf41515c92703)
+
+&#x200B;
+
+[Select Bench mark \(will add CPU benchmarks as well\)](https://preview.redd.it/1tkkrjjmlr191.png?width=321&format=png&auto=webp&s=941238219a5f75449cc50c90cc2837f6c8faec5d)",uy1b5v,0,3,https://www.reddit.com/r/Python/comments/uy1b5v/help_with_gui_layout/
