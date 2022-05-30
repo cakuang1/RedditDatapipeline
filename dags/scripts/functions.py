@@ -30,11 +30,15 @@ s3 = boto3.client('s3')
 
 #first task. Grabs data from api, stores them into a csv, and pushes to S3
 def datatocsv():
-    posts_dict = {"Title": [], "Post Text": [],
+    posts_dict = {"Subreddit":[], "Title": [], "Post Text": [],
               "ID": [], "Score": [],
               "Total Comments": [], "Post URL": []
               }
     for post in posts:
+        # Author of each post
+
+        posts_dict["AuthorID"].append(post.author.name)
+
         # Title of each post
         posts_dict["Title"].append(post.title)
      
@@ -62,18 +66,51 @@ def datatocsv():
     name = 'Top Posts.csv '
     s3.upload_file('/Users/caryk/Desktop/Pipeline/Top Posts.csv','imdoingthistolearn',name)
 
+    # Grab redditor data
+def booleaninfo():
+    boo_dict = {"AuthorID":[], "employee": [], "verified": [],
+            "mod": [], "gold": []
+            }
+    for post in posts:
+        boo_dict["AuthorID"].append(post.author.name)
 
-
-
-
-
-
-#second task, pulling from S3 and transforming csv files using pandas
-
-
-def transformdata():
-    #check if file is present in S3
+        boo_dict["employee"].append(post.author.is_employee)
+        # Text inside a post
+        boo_dict["verified"].append(post.author.has_verified_email)
+     
+        # Unique ID of each post
+        boo_dict["mod"].append(post.author.is_mod)
+     
+        # The score of a post
+        boo_dict["gold"].append(post.author.is_gold)
     
+    boo  = pd.DataFrame(boo_dict)
+    boo.to_csv("boolean.csv", index=True)
+    s3.upload_file('/Users/caryk/Desktop/Pipeline/boolean.csv','imdoingthistolearn','boolean.csv')
+
+
+
+
+
+def numericalinfo():
+    num_dict= {"AuthorID":[], "commentkarma": [], "linkkarma": [],
+              }
+    for post in posts:
+        num_dict["AuthorID"].append(post.author.name)
+        num_dict["commentkarma"].append(post.author.comment_karma)
+        num_dict["linkkarma"].append(post.author.link_karma)
+
+
+    
+    num  = pd.DataFrame(num_dict)
+    num.to_csv("num.csv", index=True)
+    s3.upload_file('/Users/caryk/Desktop/Pipeline/num.csv','imdoingthistolearn','num.csv')
+
+
+        
+
+
+
 
 
 
