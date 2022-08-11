@@ -14,13 +14,6 @@ The purpose of this project is to get a general idea of the types of users who p
 
 
 
-# Relational tables
-
-
-
-
-
-
 
 
 
